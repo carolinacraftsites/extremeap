@@ -1,4 +1,4 @@
-import { Route, Switch } from "wouter";
+import { Route, Switch, Router } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Home from "@/pages/Home";
@@ -6,17 +6,21 @@ import Services from "@/pages/Services";
 import About from "@/pages/About";
 import Contact from "@/pages/Contact";
 
+// Get the base path from Vite's configuration
+const base = import.meta.env.BASE_URL;
+
 function App() {
   return (
-    <div className="min-h-screen bg-background text-foreground flex flex-col">
-      <Header />
-      <main className="flex-grow">
-        <Switch>
-          <Route path="/" component={Home} />
-          <Route path="/services" component={Services} />
-          <Route path="/about" component={About} />
-          <Route path="/contact" component={Contact} />
-          <Route>
+    <Router base={base}>
+      <div className="min-h-screen bg-background text-foreground flex flex-col">
+        <Header />
+        <main className="flex-grow">
+          <Switch>
+            <Route path="/" component={Home} />
+            <Route path="/services" component={Services} />
+            <Route path="/about" component={About} />
+            <Route path="/contact" component={Contact} />
+            <Route>
             {/* 404 Page */}
             <div className="min-h-[60vh] flex items-center justify-center px-4">
               <div className="text-center">
@@ -40,6 +44,7 @@ function App() {
       </main>
       <Footer />
     </div>
+    </Router>
   );
 }
 
