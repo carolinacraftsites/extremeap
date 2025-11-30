@@ -102,6 +102,19 @@ export default function Footer() {
               Proudly serving Arden and Western North Carolina
             </p>
           </div>
+          <div className="mt-4 text-center">
+            <p className="text-xs text-gray-500">
+              Created by{" "}
+              <a
+                href="https://carolinacraftsites.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors underline"
+              >
+                Carolina Craft Sites
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>
