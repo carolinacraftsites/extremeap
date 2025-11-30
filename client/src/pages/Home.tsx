@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Award, Trophy, Medal, Sparkles, Users, Clock } from "lucide-react";
+import heroImage from "@assets/generated_images/extreme.png";
 
 export default function Home() {
   const services = [
@@ -49,7 +50,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative min-h-[80vh] flex items-center justify-center">
         <img
-          src="/attached_assets/generated_images/extreme.png"
+          src={heroImage}
           alt="Extreme Awards & Personalization"
           className="absolute inset-0 w-full h-full object-cover"
         />
